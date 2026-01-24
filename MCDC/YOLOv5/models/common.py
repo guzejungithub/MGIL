@@ -75,10 +75,10 @@ class EfficientChannelAttention(nn.Module):           # Efficient Channel Attent
 
 
 
-class space_to_depth_(nn.Module):
+class mcdc(nn.Module):
     # Changing the dimension of the Tensor
     def __init__(self, inchannels, outchannels):
-        super(space_to_depth_, self).__init__()
+        super(mcdc, self).__init__()
 
         self.conv2_dila =  nn.Conv2d(inchannels, outchannels, 3, 2, 2,dilation=2, bias=False)
         # self.conv3_dila =  nn.Conv2d(inchannels, outchannels, 3, 2, 3,dilation=3, bias=False)
